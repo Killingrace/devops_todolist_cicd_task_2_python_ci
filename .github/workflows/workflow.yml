@@ -40,7 +40,7 @@ jobs:
 
             - name: Test app
               run: |
-                pytest -v --cov=. --cov-report=term-missing
+                python manage.py test
 
             - name: Lint
               run: |
