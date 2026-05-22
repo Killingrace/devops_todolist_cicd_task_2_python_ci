@@ -1,5 +1,5 @@
 name: todoapp CI
-run-name: User ${{github.actor}} started job from ${{github.ref_name}} branch with ${{github.event.head_commit.message}} commit
+run-name: User "${{github.actor}}" started job from "${{github.ref_name}}" branch with "${{github.event.head_commit.message}}" commit
 
 on:
     push:
@@ -10,7 +10,6 @@ on:
     pull_request:
         branches:
             - main
-            - develop
 
 env:
     PYTHON_VERSION: 3.8
