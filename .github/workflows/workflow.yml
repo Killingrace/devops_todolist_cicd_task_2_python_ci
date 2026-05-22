@@ -1,5 +1,5 @@
 name: todoapp CI
-run-name: User ${{github.actor}} started job from ${{github.ref_name}} branch with ${{github.event.head_commit.message}}
+run-name: User ${{github.actor}} started job from ${{github.ref_name}} branch with ${{github.event.head_commit.message}} commit
 
 on:
     push:
@@ -40,11 +40,11 @@ jobs:
 
             - name: Test app
               run: |
-                python manage.py test
+                coverage python manage.py test
 
             - name: Test Coverage
               run: |
-                python manage.py test
+                coverage report -m
 
             - name: Lint
               run: |
