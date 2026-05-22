@@ -40,7 +40,7 @@ jobs:
 
             - name: Test app
               run: |
-                coverage python manage.py test
+                coverage run python manage.py test
 
             - name: Test Coverage
               run: |
